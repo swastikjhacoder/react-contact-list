@@ -88,19 +88,19 @@ const AddContact = () => {
               type="text" 
               placeholder='Name...' 
               ref={nameRef} 
-              value={contactData.name}
+              defaultValue={contactData.name}
               onChange = {(e) => setContactData({name: e.target.value, email:contactData.email, mobile:contactData.mobile})}
               required />
             <input 
               type="email" 
               placeholder='Email...' 
-              value={contactData.email}
+              defaultValue={contactData.email}
               onChange = {(e) => setContactData({name: contactData.name, email:e.target.value, mobile:contactData.mobile})}
               required />
             <input 
               type="number" 
               placeholder='Mobile...' 
-              value={contactData.mobile}
+              defaultValue={contactData.mobile}
               onChange = {(e) => setContactData({name: contactData.name, email:contactData.email, mobile:e.target.value})}
               required />
               <button type='submit' className='contact__buttons'>{updateContact === true ? 'Update Contact' : 'Add Contact'}</button>
